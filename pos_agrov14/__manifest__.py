@@ -12,7 +12,8 @@
     'data': [
         'views/pos_assets.xml',
         'views/sequence_ff.xml',
-        'views/pos_order_to_invoice.xml'
+        'views/pos_order_to_invoice.xml',
+        'views/order.xml'
     ],
     'qweb': [
         'static/src/xml/pos_agro.xml',
