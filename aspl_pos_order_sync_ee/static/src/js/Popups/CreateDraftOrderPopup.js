@@ -16,8 +16,8 @@ odoo.define('aspl_pos_order_sync_ee.CreateDraftOrderPopup', function(require) {
     }
     CreateDraftOrderPopup.template = 'CreateDraftOrderPopup';
     CreateDraftOrderPopup.defaultProps = {
-        confirmText: 'Confirm',
-        cancelText: 'Cancel',
+        confirmText: 'Confirmar',
+        cancelText: 'Cancelar',
         title: '',
         body: '',
     };

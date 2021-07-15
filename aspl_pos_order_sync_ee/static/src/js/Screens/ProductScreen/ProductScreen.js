@@ -61,17 +61,17 @@ odoo.define('aspl_pos_order_sync_ee.ProductScreen', function (require) {
 
 
                         if (order_line != undefined){
-                            await this.showPopup('ErrorPopup', {title: this.env._t('El precio del producto es meno que el permitido'),
-                                                                body: this.env._t('El precio del producto' + order_line.get_full_product_name() +
-                                                                ' es menor del precio mínimo ' + x_price_min + ' ' + c_min + 'a ' + a + ' id de la lista de precio '  + h),})
+                            await this.showPopup('ErrorPopup', {title: this.env._t('El precio del producto es menor que el permitido'),
+                                                                body: this.env._t('El precio del producto ' + order_line.get_full_product_name() +
+                                                                ' es menor del precio mínimo ' + x_price_min + ' para ' + c_min ),})
 
                         }
                        else{
 
                     var order_str =  currentOrder.get_is_modified_order() ? " Modify " : " Create Draft ";
                     const { confirmed } = await this.showPopup('CreateDraftOrderPopup', {
-                        title: this.env._t('Draft Order'),
-                        body: this.env._t('Do You Want To' + order_str +'Order?' + h),
+                        title: this.env._t('Enviar a CAJA'),
+                        body: this.env._t('Desea enviar este pedido a la caja?'),
                     });
                     if (confirmed){
                         this.env.pos.get_order().set_salesman_id(this.env.pos.user.id);
